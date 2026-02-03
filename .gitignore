@@ -1,0 +1,48 @@
+# .gitignore for Jewelry CV project
+
+# Python envs
+venv/
+env/
+\.env
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Dataset (large) - do NOT commit dataset to the repo
+image dataset/
+image dataset/**
+
+# Raw dataset folders
+Raw_Dataset_1088/
+
+# Models / checkpoints
+*.h5
+*.hdf5
+*.ckpt
+saved_model/
+models/
+checkpoints/
+
+# Logs and temp files
+logs/
+*.log
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Git LFS recommendation (use if storing large binaries)
+# git lfs install
+# git lfs track "image dataset/**"
