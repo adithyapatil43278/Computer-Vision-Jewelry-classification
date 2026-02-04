@@ -1,44 +1,80 @@
 # .gitignore for Jewelry CV project
 
-# Python envs
+# Python virtual environments and env files
 venv/
 env/
-\.env
+.venv/
+.python-version
+.env
+.env.*
 
 # Byte-compiled / cache
 __pycache__/
 *.py[cod]
 *$py.class
 
+# Jupyter
+.ipynb_checkpoints/
+
 # Dataset (large) - do NOT commit dataset to the repo
 image dataset/
 image dataset/**
-
-# Raw dataset folders
+CV_Dataset_1800/
 Raw_Dataset_1088/
 
-# Models / checkpoints
+# Models / checkpoints / binaries
+models/
+*.keras
+models/*.keras
 *.h5
 *.hdf5
 *.ckpt
+*.pb
+*.tflite
 saved_model/
-models/
 checkpoints/
+.keras/
 
-# Logs and temp files
+# Logs, caches and temp files
 logs/
 *.log
 *.tmp
 *.temp
+.pytest_cache/
+.mypy_cache/
+.cache/
 
-# OS files
-.DS_Store
-Thumbs.db
+# Testing / coverage
+.coverage
+htmlcov/
+
+# Build / packaging
+build/
+dist/
+eggs/
+*.egg-info/
+pip-wheel-metadata/
+__pypackages__/
 
 # IDE/editor
 .vscode/
 .idea/
+*.sublime-workspace
 
-# Git LFS recommendation (use if storing large binaries)
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Database / large binary data
+*.sqlite3
+*.db
+*.sqlite
+*.pickle
+*.pkl
+*.npy
+
+# Misc
+# If you store large binaries with Git LFS, uncomment and adjust below
 # git lfs install
 # git lfs track "image dataset/**"
